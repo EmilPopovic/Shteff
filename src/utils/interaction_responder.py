@@ -1,11 +1,12 @@
 import discord
 
-from .sql_bridge import SqlSong
+from components.song_generator import SongGenerator
 
 
 class InteractionResponder:
     default_color_rgb = (194, 149, 76)
     default_color = discord.Color.from_rgb(*default_color_rgb)
+    bot = None
 
     @classmethod
     async def send(
@@ -32,6 +33,7 @@ class InteractionResponder:
             description=text,
             color=color
         )
+
         if followup:
             await interaction.followup.send(content='', embed=embed, ephemeral=ephemeral)
         else:
@@ -54,15 +56,15 @@ class InteractionResponder:
         )
         await interaction.response.send_message(content='', embed=embed, ephemeral=True)
 
-    @staticmethod
+    @classmethod
     async def show_songs(
             cls,
-            songs: list[SqlSong],
+            songs: list[SongGenerator],
             playlist_name: str,
             interaction: discord.Interaction
     ) -> None:
-        song_names = [song.song_name for song in songs]
-        song_authors = [song.author_name for song in songs]
+        song_names = [song.name for song in songs]
+        song_authors = [song.author.name for song in songs]
         msg = ''
         for song_author, song_name in zip(song_authors, song_names):
             msg += f'{song_author} - {song_name}\n'
