@@ -289,7 +289,7 @@ The command message consists of three parts:
 
 # Contributing
 
-Contributions are welcome! If you find a bug or have an idea for a new feature, feel free to open an issue or submit a pull request. If you have any questions, you can reach out to the original creators of the bot on Discord (Mjolnir#6243 and OvajStup#7133).
+Contributions are welcome! If you find a bug or have an idea for a new feature, feel free to open an issue or submit a pull request. If you have any questions, you can reach out to the original creators of the bot on Discord (@something_emil and @ovajstup).
 
 # License
 
