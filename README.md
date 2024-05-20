@@ -1,3 +1,5 @@
+Please note: I wrote this when I was in high school. It is not good at all, but I will keep it up here. Now I am archiving this repo.
+
 # Shteff - a Discord Music Bot
 
 Shteff is a Discord bot that allows users to play music in a voice channel and manage playlist straight from Discord using various commands. The bot uses the Spotify API to gather information about songs as well as the Discord.py library to interact with the Discord API, the yt-dlp library to stream audio from YouTube and the lyricsgenius library to get the lyrics of songs. The database is handled by MySQL.
